@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
 
 """Python Base Project
-   Copyright (c) 2024, ...
+   Copyright (c) 2026, ...
 
    Help Module
 
 """
 
-from basep import basep_consts as bp_c
+import os
+import sys
+
+# Support both direct execution and module execution
+if __name__ == '__main__' and __package__ is None:
+    # Direct execution: add the parent directory to the system path
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__)))))
+    from baseproject.base import consts as c
+else:
+    # Module execution (poetry run, etc.)
+    from baseproject.base import consts as c
 
 CATEGORY_PLACEHOLDER_1 = """\
 CATEGORY_PLACEHOLDER_1
@@ -64,24 +75,26 @@ def help_with_exceptions(exceptions_messages):
 
 def __help_title():
     """Prints the title of the help. Returns nothing."""
-    print(f"{bp_c.PROG_NAME}, v{bp_c.PROG_VERSION}")
-    print(f"Copyright (c) {bp_c.PROG_YEAR}, {bp_c.PROG_COMPANY}")
+    print(f"{c.PROG_NAME}, v{c.PROG_VERSION}")
+    print(f"Copyright (c) {c.PROG_YEAR}, {c.PROG_COMPANY}")
     print("Original author: ...")
     print()
 
 
 def __help_body():
     """Prints the body of the help. Returns nothing."""
-    print(f"Usage: {bp_c.EXECUTABLE} [options...]")
+    print(f"Usage: {c.EXECUTABLE} [options...]")
     print(" * -i, --input <input file>    Input file")
     print(" * -o, --output <output file>  Output file")
+    print("   -v, --verbose               Verbose output")
     print("   -h, --help <category>       Get full help")
 
 
 def __help_footer():
     """Prints the footer of the help. Returns nothing."""
     print()
-    print("This is not the full help, use \"--help category\" to get a list of")
+    print(
+        "This is not the full help, use \"--help category\" to get a list of")
     print("all categories.")
 
 
