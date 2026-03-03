@@ -18,7 +18,7 @@ PROG_COMPANY = "Company Name"
 
 # TODO: write in COMMANDS_REQUIRED the commands required to run your program,
 #       if any
-COMMANDS_REQUIRED = ["cmd1", "cmd2"]
+COMMANDS_REQUIRED = []
 
 
 if __name__ == '__main__':
