@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """Python Base Project
-   Copyright (c) 2026, ...
+   Copyright (c) YYYY, ...
 
    Constants Module
 
@@ -11,9 +11,9 @@ import os
 import sys
 
 EXECUTABLE = os.path.basename(sys.argv[0])
-PROG_NAME = "Base Python Project"
+PROG_NAME = "Python Base Project"
 PROG_VERSION = "0.0.0"
-PROG_YEAR = "2026"
+PROG_YEAR = "YYYY"
 PROG_COMPANY = "Company Name"
 
 # TODO: write in COMMANDS_REQUIRED the commands required to run your program,

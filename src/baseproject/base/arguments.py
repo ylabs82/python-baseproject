@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """Python Base Project
-   Copyright (c) 2026, ...
+   Copyright (c) YYYY, ...
 
    Arguments Module
 
